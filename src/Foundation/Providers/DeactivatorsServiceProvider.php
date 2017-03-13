@@ -34,7 +34,7 @@ class DeactivatorsServiceProvider extends ServiceProvider
         }
 
         register_deactivation_hook($this->app->mainPluginFilePath(), function () use ($deactivatorClassName) {
-            $this->app->call([$deactivatorClassName, 'handle']);
+            $this->app->call($deactivatorClassName . '@handle');
         });
     }
 }

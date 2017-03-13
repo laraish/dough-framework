@@ -34,7 +34,7 @@ class ActivatorsServiceProvider extends ServiceProvider
         }
 
         register_activation_hook($this->app->mainPluginFilePath(), function () use ($activatorClassName) {
-            $this->app->call([$activatorClassName, 'handle']);
+            $this->app->call($activatorClassName . '@handle');
         });
     }
 }
