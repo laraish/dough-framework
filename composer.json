@@ -1,0 +1,33 @@
+{
+    "name": "laraish/dough-framework",
+    "description": "The Laraish Dough Framework.",
+    "keywords": [
+        "framework",
+        "laravel",
+        "dough",
+        "WordPress"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/laraish/dough",
+    "support": {
+        "issues": "https://github.com/laraish/dough-framework/issues",
+        "source": "https://github.com/laraish/dough-framework"
+    },
+    "authors": [
+        {
+            "name": "yaquawa",
+            "email": "yaquawa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/container": "^5.4.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraish\\Dough\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
