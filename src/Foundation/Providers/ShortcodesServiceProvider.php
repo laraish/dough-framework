@@ -36,7 +36,7 @@ class ShortcodesServiceProvider extends ServiceProvider
 
         add_action('init', function () use ($shortcodeClassName) {
             add_shortcode($shortcodeClassName::TAG, function () use ($shortcodeClassName) {
-                $this->app->call($shortcodeClassName . '@handle', func_get_args());
+                return $this->app->call($shortcodeClassName . '@handle', func_get_args());
             });
         });
     }
