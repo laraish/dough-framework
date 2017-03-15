@@ -34,7 +34,7 @@ class UninstallersServiceProvider extends ServiceProvider
             return;
         }
 
-        register_deactivation_hook($this->app->mainPluginFilePath(), function () use ($uninstallerClassName) {
+        register_uninstall_hook($this->app->mainPluginFilePath(), function () use ($uninstallerClassName) {
             $this->app->call($uninstallerClassName . '@handle');
         });
     }
