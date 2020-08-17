@@ -14,9 +14,9 @@ class UninstallersServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the uninstallers
-        $uninstallers = (array)$this->app->config('uninstallers');
+        $uninstallers = (array) $this->app->config('uninstallers');
 
-        if ( ! empty($uninstallers)) {
+        if (!empty($uninstallers)) {
             foreach ($uninstallers as $uninstallerClassName) {
                 $this->registerUninstaller($uninstallerClassName);
             }
@@ -30,12 +30,12 @@ class UninstallersServiceProvider extends ServiceProvider
      */
     protected function registerUninstaller($uninstallerClassName)
     {
-        if ( ! class_exists($uninstallerClassName)) {
+        if (!class_exists($uninstallerClassName)) {
             return;
         }
 
         $uninstallerClassName::$app = $this->app;
-        
+
         register_uninstall_hook($this->app->mainPluginFilePath(), [$uninstallerClassName, 'uninstall']);
     }
 }

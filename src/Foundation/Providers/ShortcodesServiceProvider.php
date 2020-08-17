@@ -14,9 +14,9 @@ class ShortcodesServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the shortcodes
-        $shortcodes = (array)$this->app->config('shortcodes');
+        $shortcodes = (array) $this->app->config('shortcodes');
 
-        if ( ! empty($shortcodes)) {
+        if (!empty($shortcodes)) {
             foreach ($shortcodes as $shortcodeClassName) {
                 $this->registerShortcode($shortcodeClassName);
             }
@@ -30,7 +30,7 @@ class ShortcodesServiceProvider extends ServiceProvider
      */
     protected function registerShortcode($shortcodeClassName)
     {
-        if ( ! class_exists($shortcodeClassName)) {
+        if (!class_exists($shortcodeClassName)) {
             return;
         }
 

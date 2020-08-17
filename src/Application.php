@@ -114,7 +114,6 @@ class Application extends Container
         $this->instance(static::class, $this);
     }
 
-
     /**
      * Get the specified configuration value.
      *
@@ -165,7 +164,7 @@ class Application extends Container
      */
     public function registerConfiguredProviders()
     {
-        foreach ((array)$this->config('providers') as $provider) {
+        foreach ((array) $this->config('providers') as $provider) {
             $this->register($provider);
         }
     }
@@ -180,7 +179,7 @@ class Application extends Container
      */
     public function register($provider, $force = false)
     {
-        if (($registered = $this->getProvider($provider)) && ! $force) {
+        if (($registered = $this->getProvider($provider)) && !$force) {
             return $registered;
         }
 
@@ -264,7 +263,6 @@ class Application extends Container
             return $this->call([$provider, 'boot']);
         }
     }
-
 
     public function boot()
     {

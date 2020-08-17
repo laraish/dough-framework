@@ -14,9 +14,9 @@ class SettingsPagesServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the settingsPages
-        $settingsPages = (array)$this->app->config('settings_pages');
+        $settingsPages = (array) $this->app->config('settings_pages');
 
-        if ( ! empty($settingsPages)) {
+        if (!empty($settingsPages)) {
             foreach ($settingsPages as $settingsPageClassName) {
                 $this->registerSettingsPage($settingsPageClassName);
             }

@@ -14,8 +14,8 @@ class DeactivatorsServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the deactivators
-        $deactivators = (array)$this->app->config('deactivators');
-        if ( ! empty($deactivators)) {
+        $deactivators = (array) $this->app->config('deactivators');
+        if (!empty($deactivators)) {
             foreach ($deactivators as $deactivatorClassName) {
                 $this->registerDeactivator($deactivatorClassName);
             }
@@ -29,7 +29,7 @@ class DeactivatorsServiceProvider extends ServiceProvider
      */
     protected function registerDeactivator($deactivatorClassName)
     {
-        if ( ! class_exists($deactivatorClassName)) {
+        if (!class_exists($deactivatorClassName)) {
             return;
         }
 

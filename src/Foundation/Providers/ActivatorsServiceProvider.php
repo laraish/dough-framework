@@ -14,8 +14,8 @@ class ActivatorsServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the activators
-        $activators = (array)$this->app->config('activators');
-        if ( ! empty($activators)) {
+        $activators = (array) $this->app->config('activators');
+        if (!empty($activators)) {
             foreach ($activators as $activatorClassName) {
                 $this->registerActivator($activatorClassName);
             }
@@ -29,7 +29,7 @@ class ActivatorsServiceProvider extends ServiceProvider
      */
     protected function registerActivator($activatorClassName)
     {
-        if ( ! class_exists($activatorClassName)) {
+        if (!class_exists($activatorClassName)) {
             return;
         }
 

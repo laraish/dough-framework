@@ -14,9 +14,9 @@ class WidgetsServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the widgets
-        $widgets = (array)$this->app->config('widgets');
+        $widgets = (array) $this->app->config('widgets');
 
-        if ( ! empty($widgets)) {
+        if (!empty($widgets)) {
             foreach ($widgets as $widgetClassName) {
                 $this->registerWidget($widgetClassName);
             }

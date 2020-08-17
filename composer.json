@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/container": "6.*"
+        "illuminate/container": "^7.0"
     },
     "autoload": {
         "psr-4": {
@@ -29,5 +29,8 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "fix-cs": ["prettier **/*.php --write"]
+    }
 }
