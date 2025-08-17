@@ -1,36 +1,38 @@
 {
-    "name": "laraish/dough-framework",
-    "description": "The Laraish Dough Framework.",
-    "keywords": [
-        "framework",
-        "laravel",
-        "dough",
-        "WordPress"
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/laraish/dough",
-    "support": {
-        "issues": "https://github.com/laraish/dough-framework/issues",
-        "source": "https://github.com/laraish/dough-framework"
-    },
-    "authors": [
-        {
-            "name": "yaquawa",
-            "email": "yaquawa@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "illuminate/container": "^10.10"
-    },
-    "autoload": {
-        "psr-4": {
-            "Laraish\\Dough\\": "src/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "fix-cs": ["prettier **/*.php --write"]
+  "name": "laraish/dough-framework",
+  "description": "The Laraish Dough Framework.",
+  "keywords": [
+    "framework",
+    "laravel",
+    "dough",
+    "WordPress"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/laraish/dough",
+  "support": {
+    "issues": "https://github.com/laraish/dough-framework/issues",
+    "source": "https://github.com/laraish/dough-framework"
+  },
+  "authors": [
+    {
+      "name": "yaquawa",
+      "email": "yaquawa@gmail.com"
     }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/container": "^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laraish\\Dough\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "fix-cs": [
+      "prettier **/*.php --write"
+    ]
+  }
 }
